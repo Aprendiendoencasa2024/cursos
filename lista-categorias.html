@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas las categorías - Aprendiendo en Casa</title>
+    <link rel="stylesheet" href="lista-categorias.css">
+    <style>
+        /* Estilo para la imagen de fondo */
+        #imagen-fondo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Para que esté detrás del contenido */
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagen de fondo (por defecto para escritorio) -->
+    <img id="imagen-fondo" src="fondo-lista.png" alt="Fondo de la lista de categorías">
+
+    <!-- Contenedor de las categorías -->
+    <section id="contenido" class="course-container">
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="cursosdereparacion.png" alt="Reparación">
+            </div>
+            <div class="details-course">
+                <h3>Cursos de reparación</h3>
+                <button onclick="window.location.href='categoria-reparaciones.html'">Ver los cursos</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="cursosdebelleza.png" alt="Belleza">
+            </div>
+            <div class="details-course">
+                <h3>Cursos de belleza</h3>
+                <button onclick="window.location.href='categoria-belleza.html'">Ver los cursos</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="cursosdeoficios.png" alt="Oficios">
+            </div>
+            <div class="details-course">
+                <h3>Cursos de oficios</h3>
+                <button onclick="window.location.href='categoria-oficios.html'">Ver los cursos</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="electrodomesticos.png" alt="Hogar">
+            </div>
+            <div class="details-course">
+                <h3>Cursos de reparación de electrodomésticos</h3>
+                <button onclick="window.location.href='categoria-reparacion-electro.html'">Ver los cursos</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="cursos-habilidades.png" alt="Habilidades">
+            </div>
+            <div class="details-course">
+                <h3>Cursos de habilidades</h3>
+                <button onclick="window.location.href='categoria-habilidades.html'">Ver los cursos</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="desarrollo.png" alt="Desarrollo">
+            </div>
+            <div class="details-course">
+                <h3>Cursos de desarrollo personal y espiritualidad</h3>
+                <button onclick="window.location.href='categoria-espiritualidad.html'">Ver los cursos</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="hogar.png" alt="Hogar">
+            </div>
+            <div class="details-course">
+                <h3>Cursos de hogar</h3>
+                <button onclick="window.location.href='categoria-hogar.html'">Ver los cursos</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Espera para mostrar el contenido después de que la imagen haya cargado
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('contenido').classList.add('mostrar');
+            }, 500);
+        }
+
+        // Cambiar la imagen de fondo para dispositivos móviles
+        if (window.innerWidth <= 720) {
+            document.getElementById("imagen-fondo").src = "fondo-categoriasmovil.png"; // Imagen para móvil
+        }
+    </script>
+</body>
+</html>

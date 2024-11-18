@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría Belleza - Aprendiendo en Casa</title>
+    <link rel="stylesheet" href="categoria-belleza.css">
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video id="video-fondo" autoplay muted loop>
+        <source src="fondo-video-pc.mp4" type="video/mp4">
+        <source src="fondo-video-pc.webm" type="video/webm">
+        <source src="fondo-video-movil.mp4" type="video/mp4">
+        <source src="fondo-video-movil.webm" type="video/webm">
+        Tu navegador no soporta el formato de video.
+    </video>
+
+    <!-- Contenedor de las categorías -->
+    <section id="contenido" class="course-container">
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="curso-uñas.png" alt="Curso de Uñas">
+            </div>
+            <div class="details-course">
+                <h3>Curso de uñas a sólo $990</h3>
+                <button onclick="window.location.href='https://wa.me/5491132279834?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20del%20curso%20de%20u%C3%B1as%2C%20por%20favor.'">A $990, ¡Quiero info!</button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="curso-pedicura.png" alt="Curso de Uñas">
+            </div>
+            <div class="details-course">
+                <h3>Curso de pedicura a sólo $990</h3>
+                <button onclick="window.location.href='https://wa.me/5491132279834?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20del%20curso%20de%20Pedicura%2C%20por%20favor.'">¡Quiero información!</button>
+            </div>
+            </div>
+            
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="pestañas.png" alt="Curso de Uñas">
+            </div>
+            <div class="details-course">
+                <h3>Curso de pestañas a sólo $990</h3>
+                <button onclick="window.location.href='https://wa.me/5491132279834?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20del%20curso%20de%20Pesta%C3%B1as%2C%20por%20favor.'">¡Quiero información!</button>
+            </div>
+            </div>
+            
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="maquillaje.png" alt="Curso de Uñas">
+            </div>
+            <div class="details-course">
+                <h3>Curso de maquillaje a sólo $990</h3>
+                <button onclick="window.location.href='https://wa.me/5491132279834?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20del%20curso%20de%20Maquillaje%2C%20por%20favor.'">¡Quiero información!</button>
+            </div>
+            </div>
+            
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="peluqueria.png" alt="Curso de Uñas">
+            </div>
+            <div class="details-course">
+                <h3>Curso de peluquería a sólo $990</h3>
+                <button onclick="window.location.href='https://wa.me/5491132279834?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20del%20curso%20de%20Peluquer%C3%ADa%2C%20por%20favor.'">¡Quiero información!</button>
+            </div>
+            </div>
+            
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="colorimetria.png" alt="Curso de Uñas">
+            </div>
+            <div class="details-course">
+                <h3>Curso de colorimetría a sólo $990</h3>
+                <button onclick="window.location.href='https://wa.me/5491132279834?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20del%20curso%20de%20Colorimetr%C3%ADa%2C%20por%20favor.'">¡Quiero información!</button>
+            </div>
+            </div>
+            
+
+        <!-- Tarjeta de curso -->
+        <div class="course-card categoria">
+            <div class="course-image">
+                <img src="cejas.png" alt="Curso de Uñas">
+            </div>
+            <div class="details-course">
+                <h3>Curso de cejas a sólo $990</h3>
+                <button onclick="window.location.href='https://wa.me/5491132279834?text=%C2%A1Hola!%20Quiero%20informaci%C3%B3n%20del%20curso%20de%20Cejas%2C%20por%20favor.'">¡Quiero información!</button>
+            </div>
+            </div>
+            
+    </section>
+
+    <script>
+        // Espera para mostrar el contenido después de que el video haya comenzado
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('contenido').classList.add('mostrar');
+            }, 500);
+        }
+
+        // Cambiar el video para dispositivos móviles
+        if (window.innerWidth <= 768) {
+            const video = document.getElementById("video-fondo");
+            video.src = "fondo-video-movil.mp4";
+            video.load();
+        }
+    </script>
+</body>
+</html>

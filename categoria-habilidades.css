@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #ffffff;
+    overflow: auto; /* Permite el desplazamiento */
+}
+
+/* Contenedor de fondo con imagen */
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('habilidades.png'); /* Enlaza la imagen aquí */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center;
+    z-index: -1;
+}
+
+/* Contenedor de los cursos */
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start; /* Alinea las tarjetas al principio de cada fila */
+    gap: 20px; /* Espacio de 20px entre las tarjetas */
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.course-container.mostrar {
+    opacity: 1;
+}
+
+/* Estilo para cada tarjeta de curso */
+.course-card {
+    background-color: #000000;
+    border-radius: 15px;
+    overflow: hidden;
+    width: calc(33.33% - 20px); /* Tres tarjetas por fila */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen dentro de la tarjeta */
+.course-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+/* Detalles del curso */
+.details-course {
+    padding: 20px;
+}
+
+.details-course h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* Botón de acción */
+.categoria button {
+    background-color: #4eabd6;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.categoria button:hover {
+    background-color: #250b99cc;
+}
+
+/* Adaptación para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .course-card {
+        width: calc(50% - 20px); /* Dos tarjetas por fila */
+    }
+
+    /* Modificar el fondo en móviles */
+    .fondo {
+        background-image: url('habilidadesmovil.png'); /* Cambia la imagen de fondo */
+    }
+}
+
+@media (max-width: 480px) {
+    .course-card {
+        width: calc(100% - 20px); /* Una tarjeta por fila */
+    }
+
+    /* Eliminar el texto en header y agregar ícono */
+    header {
+        display: none;
+    }
+
+    .icono-header {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-image: url('icono.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    /* Ajustar el espaciado y alineación de los cursos */
+    .course-container {
+        padding: 20px;
+    }
+
+    .details-course h3 {
+        font-size: 1.2em; /* Reducir el tamaño del texto */
+    }
+
+    .categoria button {
+        font-size: 1em; /* Reducir el tamaño del botón */
+        padding: 8px;
+    }
+}
